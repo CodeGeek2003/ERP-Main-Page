@@ -1,0 +1,186 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Stack navbar on top, container below */
+}
+
+/* Navbar */
+header {
+  background-color: #333;
+  padding: 20px 0;
+  position: fixed; /* Make navbar relative to the page */
+  z-index: 2;
+  width: 100%; /* Ensure navbar takes full width */
+  margin-bottom: 0; /* Remove any bottom margin */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.logo h1 {
+  color: #fff;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links li a {
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #1c1c1c;
+}
+
+.nav-links li a:active {
+  background-color: #666;
+  color: #fff;
+}
+
+.nav-links li a:focus {
+  outline: none;
+}
+
+/* Body Section */
+.body-section {
+  padding: 30px;
+}
+
+#workers-data {
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2a2a2a;
+  color: #fff;
+  text-align: left;
+}
+
+table th, table td {
+  padding: 15px;
+  border: 1px solid #444;
+}
+
+table th {
+  background-color: #444;
+}
+
+table tr:nth-child(even) {
+  background-color: #333;
+}
+
+table tr:hover {
+  background-color: #555;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #333;
+  color: #fff;
+  width: 250px; /* Sidebar width */
+  height: 100%; /* Full viewport height */
+  padding: 20px;
+  position: fixed; /* Fixed positioning to stay in place */
+  top: 0; /* Directly under the navbar */
+  left: 0;
+  transition: width 0.3s ease;
+  z-index: 1;
+  margin: 0; /* Remove any margin */
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* Optional: add a shadow to separate sidebar from content */
+  padding-top: 80px; /* Add space for navbar */
+}
+
+
+/* Sidebar Buttons */
+.sidebar-header h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-btn {
+  background-color: #444;
+  color: #fff;
+  border: 2px solid transparent;
+  text-align: left;
+  font-size: 14px;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.sidebar-btn:hover {
+  background-color: #555;
+  border-color: #fff;
+}
+
+.sidebar-btn:focus {
+  outline: none;
+}
+
+.resizer {
+  background-color: #777;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  cursor: ew-resize;
+}
+
+/* Content Section */
+.content {
+  margin-left: 250px; /* Offset by sidebar width */
+  padding: 20px;
+  background-color: #222;
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto;
+  padding-top: 80px; /* Add padding to avoid navbar overlap */
+}
+
